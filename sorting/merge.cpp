@@ -14,21 +14,21 @@ void merge(vector<int> &nums,int s,int mid,int e){
     for(int j=0;j<size2;j++){
         nums2[j]=nums[mid+1+j];
     }
-    int i=0,j=0,k=0;
+    int i=0,j=0,k=s;
     while(i<size1 && j<size2){
         if(nums1[i]<nums2[j]){
-            nums[s+k]=nums1[i++];
+            nums[k]=nums1[i++];
         }else{
-            nums[s+k]=nums2[j++];
+            nums[k]=nums2[j++];
         }
         k++;
     }
     while(i<size1){
-        nums[s+k]=nums1[i++];
+        nums[k]=nums1[i++];
         k++;
     }
     while(j<size2){
-        nums[s+k]=nums2[j++];
+        nums[k]=nums2[j++];
         k++;
     }
 }

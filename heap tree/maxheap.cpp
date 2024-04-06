@@ -19,7 +19,7 @@ class heap{
         int largest=i;
         int l=i*2;
         int r=i*2+1;
-        if(l<n && arr[l]>arr[largest]){
+        if(l<=n && arr[l]>arr[largest]){
             largest=l;
         }
         if(r<=n && arr[r]>arr[largest]){
@@ -75,6 +75,7 @@ int main(){
     h.insert(53);
     h.insert(52);
     h.insert(57);
+    h.insert(60);
     h.print();
     h.heapSort(h.size);
     h.print();
