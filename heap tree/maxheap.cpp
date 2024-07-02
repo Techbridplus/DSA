@@ -36,9 +36,9 @@ class heap{
         size++;
         int index=size;
         arr[index]=val;
-        for(int i=size/2;i>0;i--){
-           heapify(i,size);
-    }
+    //     for(int i=size/2;i>0;i--){
+    //        heapify(i,size);
+    // }
     }
     void deletenode(){
         if(size==0){
@@ -76,6 +76,9 @@ int main(){
     h.insert(52);
     h.insert(57);
     h.insert(60);
+    for(int i=h.size/2;i>0;i--){
+           h.heapify(i,h.size);
+    }
     h.print();
     h.heapSort(h.size);
     h.print();
